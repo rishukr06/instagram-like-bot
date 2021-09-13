@@ -4,7 +4,7 @@ let counter = 0;
 const totalPost = 200;
 // sleep to avoid 429
 // its not a foolproof solution
-const SleepTime = 25000;
+const sleepTime = 25000;
 // min time require to load the post ~depends on your internet speed
 const minWatchTime = 3000;
 
