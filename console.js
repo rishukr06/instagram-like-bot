@@ -12,7 +12,7 @@ const posts = document.getElementsByClassName("_9AhH0");
 posts[0].click();
 await new Promise(r => setTimeout(r, minWatchTime));
 const firstLikeButton = document.querySelectorAll('[aria-label="Like"]');
-if (firstLikeButton.length > 0) {
+if (firstLikeButton.length > 0 && firstLikeButton[0].height.animVal.value === 24) {
     firstLikeButton[0].parentElement.click();
 }
 
@@ -30,7 +30,7 @@ for (let i = 0; i < totalPost; i++) {
   	const watchTime = minWatchTime + randomMilliSeconds;
     await new Promise(r => setTimeout(r, watchTime));
     const likeButton = document.querySelectorAll('[aria-label="Like"]');
-    if (likeButton.length > 0) {
+    if (likeButton.length > 0 && likeButton[0].height.animVal.value === 24) {
         likeButton[0].parentElement.click(); 
       	counter += 1;
       	console.log(`counter = ${counter}`);
